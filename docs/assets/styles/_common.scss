@@ -1,0 +1,17 @@
+@import "variables";
+@import "fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: $text-color;
+}
+.container {
+  margin: 0 auto;
+}

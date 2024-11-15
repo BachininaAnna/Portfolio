@@ -1,0 +1,94 @@
+@import "variables";
+@import "fonts";
+
+@mixin color-link {
+  border: 2px solid transparent;
+  border-image: linear-gradient($deg-gradient, $color1, $color2);
+  border-image-slice: 1;
+  display: inline-block;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient($deg-gradient, $color1, $color2);
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient($deg-gradient, $color1, $color2);
+    transition: .3s ease all;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover a {
+    color: $bg1;
+    transition: .3s ease all;
+  }
+}
+
+@mixin white-link {
+  border: 2px solid $bg1;
+  display: inline-block;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: $bg1;
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: $bg1;
+    transition: .3s ease all;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover a {
+    color: $color2;
+    transition: .3s ease all;
+  }
+}
+
+@mixin h1 {
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+@mixin section-padding {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  @media (max-width: 720px) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  @media (max-width: 400px) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
