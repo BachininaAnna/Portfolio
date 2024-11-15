@@ -1,0 +1,330 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/animation";
+@import "../../../assets/styles/media";
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  background: #fff;
+  color: $text-color;
+
+  .container {
+    .hero-title {
+      @include h1;
+      text-align: left;
+
+      @media (max-width: 980px) {
+        font-size: 36px;
+      }
+      @media (max-width: 850px) {
+        font-size: 32px;
+      }
+      @media (max-width: 750px) {
+        max-width: 550px;
+      }
+      @media (max-width: 500px) {
+        max-width: 400px;
+      }
+      @media (max-width: 450px) {
+        font-size: 28px;
+      }
+
+      &.visible {
+        animation: 0.8s ease slideInLeft20;
+      }
+
+      .text-color-name {
+        background-image: linear-gradient($deg-gradient, $color1, $color2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+    }
+
+    .hero-know-more {
+      @include color-link;
+      padding: 8px 20px;
+      cursor: pointer;
+      @media (max-width: 500px) {
+        padding: 6px 16px;
+      }
+
+      &.visible {
+        animation: 1.1s ease slideInDown40;
+      }
+
+      a {
+        font-size: 24px;
+        font-weight: 600;
+
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+
+    }
+  }
+}
+
+.about {
+  @include section-padding;
+  background-image: linear-gradient($deg-gradient, $color1, $color2);
+
+  .container {
+    .about-title {
+      @include h1;
+      color: $bg1;
+      text-align: center;
+      @media (max-width: 800px) {
+        font-size: 32px;
+      }
+      @media (max-width: 700px) {
+        margin-bottom: 15px;
+      }
+      @media (max-width: 400px) {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+
+      &.visible {
+        animation: 0.8s ease slideInUp40;
+      }
+    }
+
+    .about-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 720px) {
+        flex-wrap: wrap;
+      }
+
+      .about-info-photo {
+        padding: 15px;
+        text-align: center;
+
+        &.visible {
+          animation: 1s ease slideInDown20;
+        }
+
+        img {
+          border-radius: 5px;
+          max-width: 350px;
+          @media (max-width: 800px) {
+            width: 300px;
+          }
+          @media (max-width: 400px) {
+            width: 250px;
+          }
+        }
+      }
+
+      .about-info-text {
+        padding: 15px;
+        width: 450px;
+        color: $bg1;
+        min-width: 325px;
+        @media (max-width: 720px) {
+          display: contents;
+        }
+        @media (max-width: 400px) {
+          font-size: 18px;
+        }
+
+        &.visible {
+          animation: 1s ease slideInRight20;
+        }
+
+        .text {
+          margin-bottom: 20px;
+
+          p {
+            padding: 5px 0;
+          }
+        }
+
+        .button {
+          @include white-link;
+          padding: 8px 16px;
+
+          a {
+            font-size: 16px;
+            font-weight: 600;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  @include section-padding;
+
+  .container {
+    .projects-title {
+      @include h1;
+      color: $text-color;
+      text-align: center;
+      @media (max-width: 800px) {
+        font-size: 32px;
+      }
+      @media (max-width: 700px) {
+        margin-bottom: 15px;
+      }
+      @media (max-width: 400px) {
+        font-size: 28px;
+      }
+
+
+      &.visible {
+        animation: 1.5s ease opacityD;
+      }
+    }
+  }
+}
+
+.contacts {
+  padding: 30px 0;
+  background-image: linear-gradient($deg-gradient, $color1, $color2);
+
+  .container {
+    text-align: center;
+
+    .contacts-title {
+      @include h1;
+      font-size: 32px;
+      color: $bg1;
+      text-align: center;
+      margin-bottom: 25px;
+      @media (max-width: 400px) {
+        font-size: 28px;
+        margin-bottom: 0;
+      }
+
+      &.visible {
+        animation: 1.5s ease opacityD;
+      }
+    }
+
+    .button {
+      @include white-link;
+      padding: 12px 24px;
+      @media (max-width: 400px) {
+        display: none;
+      }
+
+      &.visible {
+        animation: 1.1s ease slideInDown40;
+      }
+
+      a {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 25px 0;
+  background-color: #333;
+
+  .container {
+    text-align: center;
+    transform: scale(0.9);
+    @media (max-width: 568px) {
+      transform: scale(0.8);
+    }
+
+    .footer_up {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 20px;
+      height: 50px;
+      cursor: pointer;
+
+      &.visible {
+        animation: 1.1s ease slideInUp20;
+      }
+
+      img {
+        width: 45px;
+        transition: .3s ease all;
+      }
+    }
+
+    .footer_up:hover {
+      img {
+        width: 55px;
+        transform: translateY(-5px);
+        transition: .3s ease all;
+      }
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.visible {
+        animation: 1.1s ease slideInDown20;
+      }
+
+      .icon {
+        padding: 0 12px;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+      }
+
+      .git, .email {
+        img {
+          width: 62px;
+          transition: .3s ease all;
+        }
+      }
+
+      .git:hover, .email:hover {
+        img {
+          width: 70px;
+          transform: translateY(-5px);
+          transition: .3s ease all;
+        }
+      }
+
+      .wa, .telegram {
+        img {
+          margin-top: 5px;
+          width: 50px;
+          transition: .3s ease all;
+        }
+      }
+
+      .wa:hover, .telegram:hover {
+        img {
+          width: 58px;
+          transform: translateY(-5px);
+          transition: .3s ease all;
+        }
+      }
+    }
+
+    .line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px 0;
+
+      hr {
+        width: 70%;
+        opacity: 50%;
+      }
+    }
+  }
+}
+

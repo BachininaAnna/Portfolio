@@ -1,0 +1,16 @@
+<div class="project" *ngIf="project">
+  <div class="project-info animation">
+    <div class="project-info-title">{{project.name}}</div>
+    <div class="project-info-text">
+      {{project.description}}
+    </div>
+    <div class="project-info-links">
+      <div class="link-live link"><a [href]="project.live" target="_blank">See Live</a></div>
+      <div class="link-source link"><a [href]="project.source" target="_blank">Source Code</a></div>
+    </div>
+  </div>
+  <a [href]="project.live" class="project-image animation" target="_blank">
+    <img [src]="project.image">
+  </a>
+</div>
+

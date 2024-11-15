@@ -1,0 +1,81 @@
+<section class="hero" #hero>
+  <div class="container">
+    <h1 class="hero-title animation">
+      Hi Everyone! My name is
+      <span class="text-color-name">Bachinina Anna</span>
+      <br>
+      I'm a Frontend Developer
+    </h1>
+    <div class="hero-know-more animation">
+      <a (click)="scroll(about)">Know more</a>
+    </div>
+  </div>
+</section>
+<section class="about" #about>
+  <div class="container">
+    <h1 class="about-title animation">ABOUT ME</h1>
+    <div class="about-info">
+      <div class="about-info-photo animation">
+        <img src="../../../assets/images/my_mini_square_izbw.jpg" alt="Бачинина Анна">
+      </div>
+      <div class="about-info-text animation">
+        <div class="text">
+          <p>I Code and Develop website and web apps.</p>
+          <p>Skilled in Angular, RxJS, TS, JS, HTML/CSS/SCSS, Webpack.</p>
+          <p>Engineer with a degree in Computer Science at Dubna State University.</p>
+          <p>I am striving to develop my career in the field of IT development.</p>
+          <p>I believe in constant learning that enhances my coding skills more and more!</p>
+        </div>
+        <div class="button">
+          <a href="../../../assets/images/resume2_compressed.pdf" target="_blank">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects">
+  <div class="container">
+    <h1 class="projects-title animation">PROJECTS</h1>
+    <div class="projects-items">
+      <project *ngFor="let project of projects" [project]="project"></project>
+    </div>
+  </div>
+</section>
+
+<section class="contacts">
+  <div class="container">
+    <h1 class="contacts-title animation">WANNA CONTACT</h1>
+    <div class="button animation">
+      <a href="https://t.me/anna_bachinina">CLICK ME! https://t.me/anna_bachinina</a>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container">
+    <a class="footer_up animation" (click)="scroll(hero)">
+      <img src="../../../assets/icon/arrow-up.png" alt="up">
+    </a>
+    <div class="footer-icons animation">
+      <a class="icon git" href="https://github.com/BachininaAnna" target="_blank">
+        <img src="../../../assets/icon/github-white.png" alt="https://github.com/BachininaAnna">
+      </a>
+      <a class="icon wa" href="https://wa.me/79162465285" target="_blank">
+        <img src="../../../assets/icon/whatsapp-white.png" alt="+7 916 246 52 85">
+      </a>
+      <a class="icon telegram" href="https://t.me/anna_bachinina" target="_blank">
+        <img src="../../../assets/icon/telegram-white.png" alt="https://t.me/anna_bachinina">
+      </a>
+      <a class="icon email" href="9162465285@mail.ru" target="_blank">
+        <img src="../../../assets/icon/email-white.png" alt="9162465285@mail.ru">
+      </a>
+    </div>
+    <div class="line">
+      <hr>
+    </div>
+  </div>
+</section>
+
+
+
