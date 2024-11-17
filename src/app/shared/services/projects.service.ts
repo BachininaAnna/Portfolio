@@ -7,7 +7,7 @@ import {ProjectsType} from "../../../assets/type/projects";
 export class ProjectsService {
 
   public projects: ProjectsType[];
-  public path: string = '../../../assets/images/projects/';
+  public path: string = 'assets/images/projects/';
 
   constructor() {
     this.projects = [
